@@ -1,0 +1,44 @@
+:root {
+    --primary-color: #000ca6;
+}
+
+.fheader {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.container-fluid {
+    background-color: #f6f6f6;
+}
+
+h2 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.card {
+    height: 516px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 700;
+    width: 25%;
+    margin-top: 15px;
+}
+
+img.mobil2 {
+    height: 280px;
+}
+
+.btn.bmobil {
+    font-size: 20px;
+}
+
+.reviewcard {
+    background-color: #f6f6f6;
+    width: 380px;
+    height: 462px;
+    gap: 10px;
+}

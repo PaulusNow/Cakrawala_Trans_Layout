@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.cover img {
+    margin: auto;
+    width: 100%;
+    height: 1050px;
+    margin-top: -50px;
+}
+
+.bantuan1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    font-size: 16px;
+    padding: 15px 50px;
+    background-color: #000ca6;
+    color: #fff;
+    width: fit-content;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.pusatbantuan {
+    position: absolute;
+    font-size: 25px;
+    width: 1050px;
+    top: 90%;
+    color: #fff;
+}
+
+.pusatbantuan h1 {
+    margin: -5rem 4rem 1rem 13rem;
+    font-weight: 1000;
+}
+
+.pusatbantuan p {
+    font-size: 65px;
+    margin: 0 4rem 5rem 4rem;
+}
+
+.bantuan2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    font-size: 16px;
+    padding: 15px 50px;
+    background-color: #000ca6;
+    color: #fff;
+    width: fit-content;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logowa {
+    position: absolute;
+    top: 50%;
+    left: 85%;
+}
+
+.logowa h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -50%;
+    font-size: 25px;
+    padding: 15px 50px;
+    background-color: #fff;
+    color: #000ca6;
+    width: fit-content;
+    height: 50px;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logowa img {
+    width: 200px;
+    height: auto;
+}
+
+.dropdown {
+    width: 300px;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.input-box {
+    width: 170%;
+    height: 40px;
+    box-sizing: border-box;
+    outline: 0.3mm solid rgba(0, 0, 0, 0.1);
+    border-radius: 2mm;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    top: -20px;
+    left: 10%;
+    background: #fff;
+}
+
+.input-box::before {
+    content: "";
+    font-family: "Material Icons";
+    position: absolute;
+    font-size: 18px;
+    top: 25%;
+    right: 15px;
+    transform: translate(9, -50%);
+    width: fit-content;
+    height: fit-content;
+}
+
+.input-box.open::before {
+    content: "";
+}
+
+.input-box:empty::after {
+    content: "Apa yang ingin Anda tanyakan?";
+}
+
+.list {
+    position: relative;
+    top: -20px;
+    left: 10%;
+    bottom: 60%;
+    width: 170%;
+    height: fit-content;
+    background: white;
+    margin-top: 10px;
+    border-radius: 2mm;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15),
+        0 1px 3px 1px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    transition: 0.25s ease-out;
+}
+
+.list input {
+    display: none;
+}
+
+.list label {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+}
+
+.list label:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+input:checked + label {
+    color: #000ca6;
+    background: rgb(238, 245, 252);
+}
+
+input:checked + label::before {
+    content: "done";
+    font-family: "Material Icons";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(0, -50%);
+    font-size: 18px;
+}
+
+.open {
+    outline: 0.7mm solid rgb(0, 11, 168);
+}
+
+.coverpusat {
+    margin-top: 10rem;
+    background-color: #3c8afa;
+    width: 100%;
+    height: 500px;
+}
+
+#id1-prosedur {
+    font-size: 30px;
+    color: #fff;
+    margin: 0 2rem 0 2rem;
+    width: 80rem;
+}
+
+#id2-prosedur {
+    font-size: 30px;
+    color: #fff;
+    margin: 0 2rem 0 2rem;
+    width: 80rem;
+}
+
+#id3-prosedur {
+    font-size: 30px;
+    color: #fff;
+    margin: 0 2rem 0 2rem;
+    width: 80rem;
+}
+
+#id4-prosedur {
+    font-size: 30px;
+    color: #fff;
+    margin: 0 2rem 0 2rem;
+    width: 80rem;
+}
+
+:root {
+    --primary-color: #000ca6;
+}
+
+#gambar {
+    background-image: url("/asset/Group 46.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.bundar {
+    width: 500px;
+    background-color: var(--primary-color);
+    color: #fff;
+    height: 50px;
+    border-radius: 50px;
+}
+
+.bundar h3 {
+    font-weight: 700;
+    text-align: center;
+}
+
+.bundarwa {
+    background-color: #fff;
+}
+
+.position-absolute.start-0 {
+    bottom: -75px;
+}
+
+.position-absolute {
+    right: 70px;
+    bottom: 10px;
+}
+
+p.position-absolute {
+    font-size: 20px;
+    right: 40px;
+}
+
+.bundarwa p {
+    color: var(--primary-color);
+    font-weight: 700;
+    background-color: #fff;
+    width: 180px;
+    height: 35px;
+    border-radius: 50px;
+}

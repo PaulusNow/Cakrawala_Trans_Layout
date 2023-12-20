@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cpesan {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 125px;
+    color: white;
+    text-transform: uppercase;
+    background-color: #ff8731;
+    font-family: "Poppins", sans-serif;
+    font-size: 35px;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.subcpesan {
+    color: white;
+    background-color: #000ca6;
+    width: 100%;
+    height: 50px;
+}
+
+form label {
+    margin: 0 20rem 1rem 0;
+    padding: 5px;
+    text-align: start;
+    color: black;
+}
+
+.confirm {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.confirm li {
+    list-style-type: none;
+    padding: 15px;
+}
+
+.activee {
+    color: #ff8731;
+}
+
+.topcontent {
+    color: #ff5e5e;
+    display: grid;
+    width: 50%;
+    height: 90vh;
+}
+
+.topcontent p {
+    margin: 100px 50px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.topcontent span {
+    font-family: "Karla", sans-serif;
+    font-weight: lighter;
+    color: black;
+}
+
+.topcontent span a {
+    font-family: "Karla", sans-serif;
+    font-weight: lighter;
+    text-decoration: underline;
+    color: #3d8afb;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="text"] {
+    width: 48%;
+}
+
+select {
+    width: 48%;
+    height: 45px;
+}
+
+span {
+    display: block;
+    margin-top: 20px;
+    font-size: 25px;
+    color: #555;
+}
+
+span a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+span a:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"][value="Lanjutkan"] {
+    padding: 10px 10px;
+}
+
+input[type="submit"] {
+    /* margin-left: 100px;
+    margin-top: 100px; */
+    margin: 100px 35rem 0 0;
+    display: flex;
+    justify-content: end;
+    width: 85%;
+    height: 55px;
+    color: white;
+    font-size: 25px;
+    background-color: #3d8afb;
+    outline: none;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 0 50px 50px 0;
+}
+
+.brandcontent {
+    position: relative;
+    bottom: 40rem;
+    left: 65rem;
+    width: 35.4%;
+}
+
+.brandcontent .brandname p {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: white;
+    left: 10rem;
+    font-family: "Poppins", sans-serif;
+    background-color: #3d8afb;
+    height: 75px;
+    font-size: 25px;
+    padding: 20px 20px;
+    border-radius: 50px 0 0 50px;
+}
+
+.brandcontent .brandimg img {
+    position: absolute;
+    left: 20rem;
+    width: 60%;
+    height: auto;
+}
+
+.brandcontent .brandimg .subbrandtext1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d8afb;
+    font-family: "Poppins", sans-serif;
+    z-index: -10;
+    position: relative;
+    left: 10rem;
+    top: 9rem;
+    color: white;
+    width: 100%;
+    font-size: 1.5rem;
+    height: 175px;
+    border-radius: 100px 0 0 100px;
+    margin-bottom: 2rem;
+}
+
+.brandcontent .brandimg .subbrandtext2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d8afb;
+    font-family: "Poppins", sans-serif;
+    z-index: -10;
+    position: relative;
+    left: 10rem;
+    top: 9rem;
+    color: white;
+    width: 100%;
+    font-size: 1.5rem;
+    height: 175px;
+    border-radius: 100px 0 0 100px;
+}
