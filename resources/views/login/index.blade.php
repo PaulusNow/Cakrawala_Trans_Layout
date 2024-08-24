@@ -45,7 +45,7 @@
         <div class="atau">
           Atau
         </div>
-       <button type="submit" class="btn btn-outline-dark" style="width: 65%"><i class="fa-brands fa-google"></i> Masuk Dengan Google</button>
+        <a href="{{route('auth.google')}}" class="btn"><i class="fa-brands fa-google"></i> Masuk Dengan Google</a>
         <div class="signup">
           Tidak punya akun? <a href="/register">Buat Sekarang</a>
         </div>
