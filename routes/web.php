@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PesanController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Routing\Route as RoutingRoute;
 
 /*
@@ -20,33 +21,18 @@ use Illuminate\Routing\Route as RoutingRoute;
 |
 */
 
-// Route::get('/', function () {
-//     return view('index', [
-//         "title" => "Beranda"
-//     ]);
-// });
-
 Route::get('/about', function () {
     return view('about', [
         "title" => "Tentang Kami"
     ]);
 });
-// Route::get('/login', function () {
-//     return view('login', [
-//         "title" => "Login"
-//     ]);
-// });
-Route::get('/produk', function () {
-    return view('produk', [
-        "title" => "Produk"
-    ]);
-});
+Route::get('/produk', [ProductController::class, 'index']);
 Route::get('/bantuan', function () {
     return view('bantuan', [
         "title" => "Pusat Bantuan"
     ]);
 });
-Route::get('/pesan', [PesanController::class, 'index'])->middleware('auth');
+Route::get('/pesanan', [PesanController::class, 'index']);
 Route::get('/pesan-konfirmasi', [PesanController::class, 'pesan'])->middleware('auth');
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');

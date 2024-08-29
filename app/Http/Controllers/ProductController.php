@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PesanController extends Controller
+class ProductController extends Controller
 {
     public function index()
     {
-        return view('produk/mobil', [
-            "title" => "Penyewaan", 
+        return view('produk', [
+            "title" => "Produk"
         ]);
     }
 }

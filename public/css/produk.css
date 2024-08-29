@@ -1,88 +1,65 @@
 * {
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box; /* Menambahkan ini untuk menghindari masalah dengan padding dan margin */
 }
 
 .text-view1 {
-  font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  position: relative;
-  margin: auto;
-  top: 25px;
+  margin: 50px auto; /* Gabungan margin untuk vertikal dan horizontal */
   width: 50%;
   color: #000CA6;
   text-align: center;
   font-size: 25px;
   text-transform: uppercase;
+  line-height: 1.4; /* Menambahkan line-height untuk spasi yang lebih baik */
 }
 
-.text-view2 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  position: relative;
-  margin: auto;
-  top: 25px;
-  width: 50%;
-  color: #000CA6;
-  text-align: center;
-  font-size: 25px;
-  text-transform: uppercase;
-  margin-top: 2rem;
+.filters {
+  color: #333; /* Menambahkan warna teks agar lebih terlihat */
 }
 
-.body {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
-}
-
-.content h3 {
-  position: relative;
-  width: 340px;
-  justify-content: center;
+hr {
+  border: 1px solid #ccc; /* Menambahkan gaya border agar lebih terlihat */
+  width: 100%; /* Memastikan garis horizontal memenuhi lebar container */
 }
 
 .card {
-  position: relative;
-  background: #f6f6f6;
-  width: 400px;
-  height: 500px;
-  margin: 0 auto;
-  margin-top: 100px;
-  margin-bottom: 2rem;
+  cursor: pointer;
 }
 
-.card .content {
-  margin-top: 60px;
-  widows: 400px;
-  padding: 30px;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  text-align: center;
+.card-text {
+  color: #8f8f8f;
 }
 
-.card .content a {
-  display: inline-block;
-  margin: 10px 0 0;
-  padding: 10px 20px;
+.card-link{
   text-decoration: none;
-  border-radius: 10px;
-  margin-top: 40px;
-  background: #000CA6;
-  color: #fff;
 }
 
-.card .sliderImage {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: -60px;
+/* Warna tombol menjadi putih */
+.btn-custom {
+  background-color: #ffffff; /* Warna putih */
+  color: #000000; /* Warna teks menjadi hitam */
+  border-color: #000000; /* Warna border hitam */
 }
 
+/* Warna panah dropdown menjadi hitam */
+.btn-custom::after {
+  border-top-color: #000000; /* Warna hitam untuk panah */
+}
 
+/* Hover state */
+.btn-custom:hover {
+  background-color: #f8f9fa; /* Warna sedikit lebih gelap saat hover */
+  color: #000000;
+  border-color: #000000;
+}
+
+/* Active state */
+.btn-custom:active, 
+.btn-custom:focus,
+.btn-custom.show {
+  background-color: #ffffff; /* Tetap putih saat aktif atau fokus */
+  color: #000000;
+  border-color: #000000;
+  box-shadow: none; /* Hilangkan shadow saat aktif */
+}

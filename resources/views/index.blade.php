@@ -66,28 +66,6 @@
         </div>
     </div>
 
-    {{-- <div class="container d-flex justify-content-between">
-  <div class="card text-center border-0 m-3" style="width: 60rem;">
-    <h1 class="card-title" style="color: #000ca6; font-weight:700">MPV</h1>
-    <img src="asset/mobil1.png" class="img-fluid" alt="...">
-    <div class="card-body d-flex flex-column align-items-center">
-      <h5 class="card-title">Toyota</h5>
-      <p class="card-text">Mobil berjenis MPV yang diproduksi oleh Toyota yang dirancang untuk mampu mengangkut 7 orang penumpang</p>
-      <a href="/pesan" class="btn" style="background-color : #000ca6; color: white">Sewa Sekarang</a>
-    </div>
-  </div>
-
-  <div class="card text-center border-0 m-3" style="width: 60rem;">
-    <h1 class="card-title" style="color: #000ca6;font-weight:700" >TRAVEL</h1>
-    <img src="asset/hiace 3.png" class="img-fluid" alt="..." style="height: 29rem">
-    <div class="card-body d-flex flex-column align-items-center">
-      <h5 class="card-title">Toyota</h5>
-      <p class="card-text">Mobil travel yang memiliki ruangan serta kenyamanan cukup, keleluasaan kabin Toyota Hiace yang mampu memuat hingga 16 penumpang</p>
-      <a href="/pesan" class="btn" style="background-color : #000ca6; color: white">Sewa Sekarang</a>
-    </div>
-  </div>
-</div> --}}
-
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center mt-5">
@@ -97,49 +75,47 @@
 
         <div class="row">
             <div class="col-md-4 text-center">
-                <div class="reviewcard">
-                    <h1 class="mt-3 p-4" style="font-weight:500">Louis Maxi</h1>
-                    <img src="asset/user1.png" alt="..." class="img-fluid p-3">
+                <div class="review-card">
+                    <h1 class="review-title">Louis Maxi</h1>
+                    <img src="asset/user1.png" alt="Louis Maxi" class="img-fluid review-img">
                     <div class="star-icon">
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
                     </div>
-                    <p style="font-weight: 500" class="p-5">Pelayanan sangat ramah, supir handal segala medan</p>
+                    <p class="review-text">Pelayanan sangat ramah, supir handal segala medan</p>
                 </div>
             </div>
             <div class="col-md-4 text-center">
-                <div class="reviewcard">
-                    <h1 class="mt-3 p-4">Yoseph Hakim</h1>
-                    <img src="asset/user2.png" alt="..." class="img-fluid p-3">
+                <div class="review-card">
+                    <h1 class="review-title">Yoseph Hakim</h1>
+                    <img src="asset/user2.png" alt="Yoseph Hakim" class="img-fluid review-img">
                     <div class="star-icon">
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
                     </div>
-                    <p style="font-weight: 500" class="p-5">Harga termasuk jauh lebih murah dari pada rentcar lain,
-                        mantap pokoknya</p>
+                    <p class="review-text">Harga termasuk jauh lebih murah dari pada rentcar lain, mantap pokoknya</p>
                 </div>
             </div>
             <div class="col-md-4 text-center">
-                <div class="reviewcard">
-                    <h1 class="mt-3 p-4">Aldo</h1>
-                    <img src="asset/user3.png" alt="..." class="img-fluid p-3">
+                <div class="review-card">
+                    <h1 class="review-title">Aldo</h1>
+                    <img src="asset/user3.png" alt="Aldo" class="img-fluid review-img">
                     <div class="star-icon">
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
-                        <i class="fa-solid fa-star" style="color: #ffc800; font-size:30px"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
+                        <i class="fa-solid fa-star star"></i>
                     </div>
-                    <p style="font-weight: 500" class="p-5">Mobil bisa lepas kunci, sangat recomended</p>
+                    <p class="review-text">Mobil bisa lepas kunci, sangat recommended</p>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 @endsection

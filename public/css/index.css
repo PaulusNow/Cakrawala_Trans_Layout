@@ -36,9 +36,111 @@ img.mobil2 {
     font-size: 20px;
 }
 
-.reviewcard {
-    background-color: #f6f6f6;
-    width: 380px;
-    height: 462px;
-    gap: 10px;
+.review-card {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-title {
+    font-weight: 500;
+    margin-top: 20px;
+    padding: 10px 0;
+    font-size: 24px;
+}
+
+.review-img {
+    padding: 15px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.star-icon {
+    margin-top: 10px;
+}
+
+.star {
+    color: #ffc800;
+    font-size: 30px;
+}
+
+.review-text {
+    font-weight: 500;
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Tampilan untuk tablet dan desktop (default) */
+@media (min-width: 768px) {
+    .review-card {
+        margin-bottom: 30px;
+    }
+
+    .review-title {
+        font-size: 24px;
+    }
+
+    .review-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .review-text {
+        font-size: 16px;
+    }
+}
+
+/* Tampilan untuk smartphone (layar kecil) */
+@media (max-width: 767px) {
+    .review-card {
+        margin-bottom: 20px;
+    }
+
+    .review-title {
+        font-size: 20px;
+    }
+
+    .review-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .review-text {
+        font-size: 14px;
+    }
+
+    .star {
+        font-size: 25px;
+    }
+}
+
+/* Tampilan untuk smartphone kecil (layar sangat kecil) */
+@media (max-width: 575px) {
+    .review-card {
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+
+    .review-title {
+        font-size: 18px;
+    }
+
+    .review-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .review-text {
+        font-size: 13px;
+        padding: 15px;
+    }
+
+    .star {
+        font-size: 20px;
+    }
 }

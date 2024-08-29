@@ -1,0 +1,341 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cbody {
+    margin-top: 50px;
+    display: flex;
+}
+
+.left-column {
+    width: 50%;
+    padding: 20px;
+}
+
+.right-column {
+    width: 50%;
+    padding: 20px;
+}
+
+.product-name {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.product-description {
+    color: #8f8f8f;
+    font-size: 16px;
+}
+
+.product-images {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+}
+
+.product-image {
+    width: 100%;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.quantity-text {
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+.price-text {
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+.custom-input {
+    width: 40px;
+    height: 30px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 30px; /* Matches the height to center text vertically */
+    padding: 0; /* Removes default padding */
+    box-sizing: border-box; /* Includes border in the width and height */
+}
+
+i {
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 25px;
+}
+/* For Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: flex-end; /* Align items to the end (right side) */
+}
+
+.price-label {
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+.price-amount {
+    font-size: 14px; /* Adjust font size as needed */
+    margin-top: 5px; /* Add space between "Harga" and the amount */
+}
+
+.custom-btn {
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    border: 1px solid #000000; /* Optional: black border to match text color */
+    border-radius: 0; /* No border radius */
+}
+
+.custom-btn:hover {
+    background-color: #000000; /* Optional: change background on hover */
+    color: #f8f9fa; /* Optional: keep text color black on hover */
+    border: 1px solid #000000; /* Optional: keep border color on hover */
+}
+
+.custom-dropdown-menu {
+    background-color: #ffffff; /* White background to match the card */
+    border: 1px solid #ddd; /* Light border to match the card */
+    border-radius: 0.25rem; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow to match card shadow */
+    padding: 0.5rem; /* Padding inside the dropdown menu */
+}
+
+.dropdown-header {
+    font-size: 1rem; /* Adjust font size as needed */
+    font-weight: 600; /* Bold header text */
+    padding: 0.5rem; /* Padding around the header */
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem; /* Adjust padding for dropdown items */
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa; /* Light background on hover */
+}
+.product-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.product-option img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    margin-right: 15px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.product-code {
+    color: #999;
+    font-size: 12px;
+    margin: 5px 0 0 0;
+}
+
+.icon-arrow {
+    transition: transform 0.3s ease;
+    width: 25px;
+    height: 25px;
+}
+
+.rotate-arrow {
+    transform: rotate(180deg);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.hidden-fadeOut {
+    animation: fadeOut 0.3s ease forwards;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.option {
+    margin-top: 5px;
+    padding: 8px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    user-select: none; /* Mencegah teks dipilih */
+}
+
+.option:hover {
+    background-color: #e0e0e0;
+}
+
+.option.selected {
+    background-color: #181818; /* Warna hijau atau warna lain yang menunjukkan pilihan aktif */
+    color: white; /* Mengubah warna teks untuk kontras */
+    border-color: #181818;
+}
+
+.review-container {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating-stars {
+    color: #f5c518; /* Warna bintang kuning */
+    font-size: 1.2em;
+}
+
+.review-time {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.review-body {
+    margin-bottom: 10px;
+}
+
+.review-user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.variant {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.review-text {
+    margin-top: 5px;
+    flex: 1;
+    font-size: 1em;
+    color: #333;
+}
+
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-action {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.review-reply-toggle {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+
+.review-reply-toggle .arrow {
+    margin-left: 5px;
+}
+
+.user-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.merk {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.review-text {
+    flex: 1;
+    font-size: 1em;
+    color: #333;
+}
