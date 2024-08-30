@@ -8,6 +8,7 @@ use App\Http\Controllers\PesanController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Routing\Route as RoutingRoute;
 
 /*
@@ -32,6 +33,7 @@ Route::get('/bantuan', function () {
         "title" => "Pusat Bantuan"
     ]);
 });
+Route::get('/profile', [ProfileController::class, 'index']);
 Route::get('/pesanan', [PesanController::class, 'index']);
 Route::get('/pesan-konfirmasi', [PesanController::class, 'pesan'])->middleware('auth');
 
@@ -42,7 +44,7 @@ Route::post('logout', [LoginController::class, 'logout']);
 Route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 Route::post('/register', [RegisterController::class, 'store']);
 
-Route::get('/admin', function() {
+Route::get('/admin', function () {
     return view('admin.index');
 });
 
