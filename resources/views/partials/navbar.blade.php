@@ -45,28 +45,6 @@
         </li>
         @endauth
       </div>
-      {{-- <ul class="navbar-nav ms-auto">
-        @auth
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Welcome, {{ auth()->user()->nama }}
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Pesanan Saya <i class="bi bi-car-front-fill"></i></a></li>
-            <li>
-              <form action="/logout" method="post">
-                @csrf
-                <button type="submit" class="dropdown-item">Logout</button>
-              </form>
-            </li>
-          </ul>
-        </li>
-        @else    
-        <li class="nav-item">
-          <a href="/login" class="nav-link {{ Request::is('login') ? 'active' : '' }}"><i class="bi bi-box-arrow-in-right"></i> Login</a>
-        </li>
-        @endauth
-      </ul> --}}
     </div>
   </div>
 </nav>
