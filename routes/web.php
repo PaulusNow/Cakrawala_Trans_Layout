@@ -51,4 +51,10 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/auth/google', [App\Http\Controllers\GoogleController::class, 'redirectToGoogle'])->name('auth.google');
 Route::get('/auth/google/callback', [App\Http\Controllers\GoogleController::class, 'handleGoogleCallback'])->name('auth.google.callback');
 
-Route::get('/admin', [AdminController::class, 'index']);
+Route::middleware(['admin'])->group(function() {
+    Route::get('/admin', [AdminController::class, 'index']);
+    Route::get('/users', [AdminController::class, 'users']);
+    Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
+    route::put('/users/{id}', [AdminController::class, 'update'])->name('users.update');
+    Route::put('/users/{id}/make-admin', [AdminController::class, 'makeAdmin'])->name('users.makeAdmin');
+});

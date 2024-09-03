@@ -22,6 +22,7 @@ class User extends Authenticatable
         'email',
         'notlp',
         'password',
+        'is_admin',
         'google_id',
     ];
 

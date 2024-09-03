@@ -1,0 +1,5 @@
+data-id="{{ $user->id }}" 
+data-name="{{ $user->nama }}"
+data-email="{{ $user->email }}" 
+data-notlp="{{ $user->notlp }}"
+data-isadmin="{{ $user->is_admin }}"
