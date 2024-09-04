@@ -61,4 +61,12 @@ class AdminController extends Controller
             return redirect()->back()->with('gagalUpdate', 'Terjadi kesalahan saat memperbarui data: ' . $e->getMessage());
         }
     }
+
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id); // Mengambil user berdasarkan ID
+        $user->delete(); // Menghapus user
+
+        return redirect()->back()->with('success', 'User berhasil dihapus.');
+    }
 }

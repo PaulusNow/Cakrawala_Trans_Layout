@@ -7,6 +7,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PesanController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\MobilController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Routing\Route as RoutingRoute;
 
@@ -52,9 +53,18 @@ Route::get('/auth/google', [App\Http\Controllers\GoogleController::class, 'redir
 Route::get('/auth/google/callback', [App\Http\Controllers\GoogleController::class, 'handleGoogleCallback'])->name('auth.google.callback');
 
 Route::middleware(['admin'])->group(function() {
+    // User 
     Route::get('/admin', [AdminController::class, 'index']);
     Route::get('/users', [AdminController::class, 'users']);
     Route::get('/admin/users', [AdminController::class, 'users'])->name('admin.users');
     route::put('/users/{id}', [AdminController::class, 'update'])->name('users.update');
     Route::put('/users/{id}/make-admin', [AdminController::class, 'makeAdmin'])->name('users.makeAdmin');
+    Route::delete('/user/{id}', [AdminController::class, 'destroy'])->name('user.destroy');
+
+    // Product 
+    Route::get('/mobil', [MobilController::class, 'index']);
+    Route::get('/mobils', [MobilController::class, 'index'])->name('mobils.index');
+    Route::post('/mobil', [MobilController::class, 'store'])->name('mobil.store');
+    Route::put('/mobils/{id}', [MobilController::class, 'update'])->name('mobils.update');
+    Route::delete('/mobils/{id}', [MobilController::class, 'destroy'])->name('mobils.destroy');
 });

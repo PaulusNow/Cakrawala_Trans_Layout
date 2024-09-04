@@ -2,16 +2,21 @@
 
 @section('content')
     <div class="container-fluid">
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Halaman User</h1>
+        <div class="d-sm-flex align-items-center justify-content-between mb-3">
+            <h1 class="h3 mb-0 text-gray-800">List Halaman Mobil</h1>
         </div>
 
-        <!-- Tabel Users -->
+        {{-- Button Tambah product --}}
+        <button type="button" class="btn btn-primary btn-sm mb-3" data-bs-toggle="modal" data-bs-target="#tambahMobilModal">
+            <i class="bi bi-plus-circle"></i> Tambah Mobil
+        </button>
+
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-center">
-                <h5 class="card-title">Daftar Pengguna</h5>
-                <form action="{{ route('admin.users') }}" method="GET" class="d-flex">
-                    <input type="text" name="search" class="form-control me-2" placeholder="Cari pengguna..." value="{{ request('search') }}">
+                <h5 class="card-title">List Mobil</h5>
+                <form action="{{ route('mobils.index') }}" method="GET" class="d-flex">
+                    <input type="text" name="search" class="form-control me-2" placeholder="Cari mobil ..."
+                        value="{{ $search ?? '' }}">
                     <button type="submit" class="btn btn-primary">Cari</button>
                 </form>
             </div>
@@ -49,45 +54,49 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
-                            <th>Email</th>
-                            <th>No Telepon</th>
-                            <th>Admin?</th>
+                            <th>Merk Mobil</th>
+                            <th>Deskripsi</th>
+                            <th>Harga</th>
+                            <th>Gambar</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($user as $singleUser) <!-- Mengganti nama variabel dari $user ke $singleUser -->
+                        @foreach ($mobils as $mobil)
                             <tr>
-                                <td>{{ $loop->iteration + ($user->currentPage() - 1) * $user->perPage() }}</td>
-                                <td>{{ $singleUser->nama }}</td>
-                                <td>{{ $singleUser->email }}</td>
-                                <td>{{ $singleUser->notlp }}</td>
+                                <td>{{ $loop->iteration + ($mobils->currentPage() - 1) * $mobils->perPage() }}</td>
+                                <td>{{ $mobil->merek_mobil }}</td>
+                                <td>{{ $mobil->deskripsi_mobil }}</td>
+                                <td>{{ "Rp. " . number_format($mobil->harga_mobil, 0, ',', '.') }}</td>
                                 <td>
-                                    <span class="badge rounded-pill text-bg-{{ $singleUser->is_admin ? 'success' : 'danger' }}">
-                                        {{ $singleUser->is_admin ? 'True' : 'False' }}
-                                    </span>
+                                    @if ($mobil->gambar_mobil)
+                                        <img src="{{ asset('storage/' . $mobil->gambar_mobil) }}" alt="Gambar Mobil"
+                                            style="width: 100px;">
+                                    @else
+                                        Tidak ada gambar
+                                    @endif
                                 </td>
                                 <td>
+                                    <!-- Aksi Edit dan Hapus -->
                                     <button class="btn btn-warning btn-sm" data-bs-toggle="modal"
-                                        data-bs-target="#editModal{{ $singleUser->id }}">
+                                        data-bs-target="#editModal{{ $mobil->id }}">
                                         <i class="bi bi-pencil-square"></i>
                                     </button>
                                     <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                        data-bs-target="#deleteModal{{ $singleUser->id }}">
+                                        data-bs-target="#deleteModal{{ $mobil->id }}">
                                         <i class="bi bi-trash"></i>
                                     </button>
                                 </td>
                             </tr>
-                            @endforeach
-                            @include('components.modal', ['user' => $singleUser])
+                            @include('components.modalmobil', ['mobils' => $mobil])
+                        @endforeach
                     </tbody>
                 </table>
-
-                <div class="d-flex justify-content-center">
-                    {{ $user->links('pagination::bootstrap-5') }}
+                <div class="pagination">
+                    {{ $mobils->links('pagination::bootstrap-5') }}
                 </div>
             </div>
         </div>
-</div>
+    </div>
+    @include('components.tambahmobil')
 @endsection
