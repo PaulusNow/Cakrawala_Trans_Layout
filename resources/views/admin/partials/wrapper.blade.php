@@ -97,9 +97,9 @@
                 </form>
 
                 <!-- Topbar Navbar -->
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ">
                     <!-- Nav Item - Messages -->
-                    <li class="nav-item dropdown no-arrow mx-1">
+                    <li class="nav-item dropdown no-arrow ">
                         <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="bi bi-envelope"></i>
@@ -118,7 +118,7 @@
                     <div class="topbar-divider d-none d-sm-block"></div>
 
                     <!-- Nav Item - User Information -->
-                    <li class="nav-item dropdown no-arrow">
+                    <li class="nav-item dropdown no-arrow d-flex flex-wrap">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             <img class="img-profile rounded-circle" src="https://via.placeholder.com/150"
